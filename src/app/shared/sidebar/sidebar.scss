@@ -8,29 +8,51 @@
 
     border-right: 1px solid #e5e7eb;
 
-    padding: 25px;
-
     display: flex;
 
     flex-direction: column;
 
 }
 
-.sidebar-title{
+/* ===========================
+   BRANDING
+=========================== */
 
-    font-size:24px;
+.sidebar-brand{
 
-    font-weight:bold;
+    display:flex;
 
-    color:#0d6efd;
+    justify-content:center;
 
-    margin-bottom:35px;
+    align-items:center;
+
+    padding:18px 20px;
+
+    border-bottom:1px solid #eef2f7;
+
+    margin-bottom:12px;
+
+    min-height:120px;
 
 }
 
+.sidebar-logo{
+
+    width:190px;
+    max-width:100%;
+    height:auto;
+
+}
+
+/* ===========================
+   MENÚ
+=========================== */
+
 .menu-section{
 
-    margin-bottom:30px;
+    margin-bottom:18px;
+
+    padding:0 20px;
 
 }
 
@@ -44,9 +66,9 @@
 
     color:#9ca3af;
 
-    margin-bottom:12px;
-
     letter-spacing:1px;
+
+    margin-bottom:12px;
 
 }
 
@@ -58,19 +80,27 @@
 
     gap:12px;
 
+    padding:10px 15px;
+
+    margin-bottom:8px;
+
+    border-radius:10px;
+
     text-decoration:none;
 
     color:#495057;
 
-    padding:12px 15px;
+    font-weight:500;
 
-    border-radius:10px;
-
-    margin-bottom:8px;
-
-    transition:.25s;
+    transition:all .25s ease;
 
     cursor:pointer;
+
+}
+
+.menu-item i{
+
+    font-size:18px;
 
 }
 
@@ -86,6 +116,8 @@
 
     background:#0d6efd;
 
-    color:white;
+    color:#ffffff;
+
+    box-shadow:0 8px 18px rgba(13,110,253,.18);
 
 }
