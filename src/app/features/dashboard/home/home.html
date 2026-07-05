@@ -1,5 +1,6 @@
 <div class="container-fluid">
 
+    <!-- Encabezado -->
     <div class="mb-4">
 
         <h2 class="fw-bold">
@@ -12,92 +13,260 @@
 
     </div>
 
+    <!-- Tarjetas KPI -->
     <div class="row g-4">
 
+        <!-- Usuarios -->
         <div class="col-md-3">
 
-        <div class="card border-0 shadow-sm h-100">
+            <div class="card dashboard-card users border-0 shadow-sm h-100">
 
-        <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="card-body d-flex justify-content-between align-items-center">
 
-            <div>
+                    <div>
 
-                <h6 class="text-muted">Usuarios</h6>
+                        <h6 class="text-muted mb-1">
+                            Usuarios
+                        </h6>
 
-                <h2 class="fw-bold">128</h2>
+                        <h2 class="fw-bold mb-1">
+                            128
+                        </h2>
+
+                        <p class="text-muted small mb-0">
+                            +12 registrados este mes
+                        </p>
+
+                    </div>
+
+                    <i class="bi bi-people-fill display-6 text-primary opacity-75"></i>
+
+                </div>
 
             </div>
 
-            <i class="bi bi-people-fill fs-1 text-primary"></i>
+        </div>
+
+        <!-- Roles -->
+        <div class="col-md-3">
+
+            <div class="card dashboard-card roles border-0 shadow-sm h-100">
+
+                <div class="card-body d-flex justify-content-between align-items-center">
+
+                    <div>
+
+                        <h6 class="text-muted mb-1">
+                            Roles
+                        </h6>
+
+                        <h2 class="fw-bold mb-1">
+                            5
+                        </h2>
+
+                        <p class="text-muted small mb-0">
+                            3 roles activos
+                        </p>
+
+                    </div>
+
+                    <i class="bi bi-shield-lock-fill display-6 text-success opacity-75"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Incidencias -->
+        <div class="col-md-3">
+
+            <div class="card dashboard-card incidents border-0 shadow-sm h-100">
+
+                <div class="card-body d-flex justify-content-between align-items-center">
+
+                    <div>
+
+                        <h6 class="text-muted mb-1">
+                            Incidencias
+                        </h6>
+
+                        <h2 class="fw-bold mb-1">
+                            36
+                        </h2>
+
+                        <p class="text-muted small mb-0">
+                            4 pendientes de atención
+                        </p>
+
+                    </div>
+
+                    <i class="bi bi-exclamation-circle-fill display-6 text-danger opacity-75"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Requerimientos -->
+        <div class="col-md-3">
+
+            <div class="card dashboard-card requirements border-0 shadow-sm h-100">
+
+                <div class="card-body d-flex justify-content-between align-items-center">
+
+                    <div>
+
+                        <h6 class="text-muted mb-1">
+                            Requerimientos
+                        </h6>
+
+                        <h2 class="fw-bold mb-1">
+                            18
+                        </h2>
+
+                        <p class="text-muted small mb-0">
+                            2 en proceso
+                        </p>
+
+                    </div>
+
+                    <i class="bi bi-clipboard-check-fill display-6 text-warning opacity-75"></i>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
-  </div>
+    <!-- Últimas incidencias -->
+    <div class="row mt-5">
 
-  <div class="col-md-3">
+        <div class="col-12">
 
-    <div class="card border-0 shadow-sm h-100">
+            <div class="card border-0 shadow-sm">
 
-        <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
 
-            <div>
+                    <h5 class="fw-bold mb-0">
 
-                <h6 class="text-muted">Roles</h6>
+                        <i class="bi bi-list-check text-primary me-2"></i>
 
-                <h2 class="fw-bold">5</h2>
+                        Últimas incidencias registradas
+
+                    </h5>
+
+                    <button class="btn btn-outline-primary btn-sm">
+
+                        Ver todas
+
+                    </button>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle mb-0">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                                <th>Código</th>
+
+                                <th>Asunto</th>
+
+                                <th>Estado</th>
+
+                                <th>Prioridad</th>
+
+                                <th>Fecha</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td><strong>INC-001</strong></td>
+
+                                <td>Falla de Internet - Aula 4</td>
+
+                                <td>
+                                    <span class="badge bg-warning text-dark">
+                                        Pendiente
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="badge bg-danger">
+                                        Alta
+                                    </span>
+                                </td>
+
+                                <td>05/07/2026</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td><strong>INC-002</strong></td>
+
+                                <td>Proyector Laboratorio</td>
+
+                                <td>
+                                    <span class="badge bg-success">
+                                        Resuelto
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="badge bg-secondary">
+                                        Baja
+                                    </span>
+                                </td>
+
+                                <td>04/07/2026</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td><strong>INC-003</strong></td>
+
+                                <td>PC Dirección</td>
+
+                                <td>
+                                    <span class="badge bg-primary">
+                                        En proceso
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="badge bg-warning text-dark">
+                                        Media
+                                    </span>
+                                </td>
+
+                                <td>04/07/2026</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
             </div>
-
-            <i class="bi bi-shield-lock-fill fs-1 text-success"></i>
-
-        </div>
-
-    </div>
-
-  </div>
-  <div class="col-md-3">
-
-    <div class="card border-0 shadow-sm h-100">
-
-        <div class="card-body d-flex justify-content-between align-items-center">
-
-            <div>
-
-                <h6 class="text-muted">Incidencias</h6>
-
-                <h2 class="fw-bold">36</h2>
-
-            </div>
-
-            <i class="bi bi-exclamation-circle-fill fs-1 text-danger"></i>
-
-        </div>
-
-    </div>
-
-    </div>
-
-     <div class="col-md-3">
-
-    <div class="card border-0 shadow-sm h-100">
-
-        <div class="card-body d-flex justify-content-between align-items-center">
-
-            <div>
-
-                <h6 class="text-muted">Requerimientos</h6>
-
-                <h2 class="fw-bold">18</h2>
-
-            </div>
-
-            <i class="bi bi-clipboard-check-fill fs-1 text-warning"></i>
 
         </div>
 
     </div>
 
 </div>
-
