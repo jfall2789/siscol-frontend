@@ -1,6 +1,5 @@
 <div class="sidebar">
 
-    <!-- Branding -->
     <div class="sidebar-brand">
 
         <img
@@ -10,65 +9,89 @@
 
     </div>
 
-    <!-- Dashboard -->
     <div class="menu-section">
 
         <span>DASHBOARD</span>
 
-        <a class="menu-item active">
+        <a
+            routerLink="/dashboard"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}"
+            class="menu-item">
+
             <i class="bi bi-speedometer2"></i>
+
             Dashboard
+
         </a>
 
     </div>
 
-    <!-- Gestión -->
     <div class="menu-section">
 
         <span>GESTIÓN</span>
 
         <a class="menu-item">
+
             <i class="bi bi-people"></i>
+
             Usuarios
+
         </a>
 
         <a class="menu-item">
+
             <i class="bi bi-shield-lock"></i>
+
             Roles
+
         </a>
 
-        <a class="menu-item">
+        <a
+            routerLink="/dashboard/incidents"
+            routerLinkActive="active"
+            class="menu-item">
+
             <i class="bi bi-exclamation-circle"></i>
+
             Incidencias
+
         </a>
 
         <a class="menu-item">
+
             <i class="bi bi-journal-text"></i>
+
             Requerimientos
+
         </a>
 
     </div>
 
-    <!-- Reportes -->
     <div class="menu-section">
 
         <span>REPORTES</span>
 
         <a class="menu-item">
+
             <i class="bi bi-bar-chart"></i>
+
             Estadísticas
+
         </a>
 
     </div>
 
-    <!-- Sistema -->
     <div class="menu-section mt-auto">
 
         <span>SISTEMA</span>
 
         <a class="menu-item">
+
             <i class="bi bi-gear"></i>
+
             Configuración
+
         </a>
 
     </div>
