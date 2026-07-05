@@ -1,0 +1,45 @@
+/* ===========================
+   Dashboard Cards
+=========================== */
+
+.dashboard-card {
+
+    border-radius: 16px;
+
+    transition: all .30s ease;
+
+    overflow: hidden;
+
+}
+
+.dashboard-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.dashboard-card.users {
+
+    border-top: 4px solid #0d6efd;
+
+}
+
+.dashboard-card.roles {
+
+    border-top: 4px solid #198754;
+
+}
+
+.dashboard-card.incidents {
+
+    border-top: 4px solid #dc3545;
+
+}
+
+.dashboard-card.requirements {
+
+    border-top: 4px solid #ffc107;
+
+}
