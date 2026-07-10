@@ -1,12 +1,10 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import {
   FormBuilder,
   ReactiveFormsModule,
   Validators
 } from '@angular/forms';
-
 import { Router } from '@angular/router';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -32,19 +30,15 @@ import { TokenService } from '../../../core/auth/token.service';
     MatSnackBarModule,
     MatCardModule
   ],
-  templateUrl: './login.html',
-  styleUrl: './login.scss'
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.scss'
 })
-export class Login implements OnInit {
+export class Login {
 
   private readonly fb = inject(FormBuilder);
-
   private readonly router = inject(Router);
-
   private readonly authService = inject(AuthService);
-
   private readonly tokenService = inject(TokenService);
-
   private readonly snackBar = inject(MatSnackBar);
 
   hidePassword = true;
@@ -83,22 +77,10 @@ export class Login implements OnInit {
 
   });
 
-  ngOnInit(): void {
-
-    if (this.tokenService.hasToken()) {
-
-      this.router.navigate(['/dashboard']);
-
-    }
-
-  }
-
   login(): void {
 
     if (this.loading) {
-
       return;
-
     }
 
     if (this.loginForm.invalid) {
@@ -111,65 +93,63 @@ export class Login implements OnInit {
 
     this.loading = true;
 
-    this.authService.login(
+    this.authService.login(this.loginForm.getRawValue())
 
-      this.loginForm.getRawValue()
+      .subscribe({
 
-    ).subscribe({
+        next: response => {
 
-      next: response => {
+          this.tokenService.saveToken(response.token);
 
-        this.tokenService.saveToken(response.token);
+          this.loading = false;
 
-        this.loading = false;
+          this.snackBar.open(
 
-        this.snackBar.open(
+            'Bienvenido a SISCOL',
 
-          'Bienvenido a SISCOL',
+            'Cerrar',
 
-          'Cerrar',
+            {
 
-          {
+              duration: 3000,
 
-            duration: 3000,
+              horizontalPosition: 'end',
 
-            horizontalPosition: 'end',
+              verticalPosition: 'top'
 
-            verticalPosition: 'top'
+            }
 
-          }
+          );
 
-        );
+          this.router.navigate(['/dashboard']);
 
-        this.router.navigate(['/dashboard']);
+        },
 
-      },
+        error: () => {
 
-      error: () => {
+          this.loading = false;
 
-        this.loading = false;
+          this.snackBar.open(
 
-        this.snackBar.open(
+            'Correo o contraseña incorrectos.',
 
-          'Correo o contraseña incorrectos.',
+            'Cerrar',
 
-          'Cerrar',
+            {
 
-          {
+              duration: 4000,
 
-            duration: 4000,
+              horizontalPosition: 'end',
 
-            horizontalPosition: 'end',
+              verticalPosition: 'top'
 
-            verticalPosition: 'top'
+            }
 
-          }
+          );
 
-        );
+        }
 
-      }
-
-    });
+      });
 
   }
 
