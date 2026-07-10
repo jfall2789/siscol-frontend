@@ -1,0 +1,112 @@
+/* ==========================================
+   Encabezado
+========================================== */
+
+h2{
+
+    color:#1f2937;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+.card{
+
+    border-radius:16px;
+
+    transition:.25s ease;
+
+}
+
+.card:hover{
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   Tabla
+========================================== */
+
+.table thead th{
+
+    font-weight:600;
+
+    color:#6b7280;
+
+    border-bottom:2px solid #e5e7eb;
+
+    white-space:nowrap;
+
+}
+
+.table tbody tr{
+
+    transition:.20s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/* ==========================================
+   Badges
+========================================== */
+
+.badge{
+
+    font-size:.80rem;
+
+    padding:.45rem .75rem;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+   Botones de acciones
+========================================== */
+
+.btn-sm{
+
+    width:36px;
+
+    height:36px;
+
+    padding:0;
+
+    border-radius:10px;
+
+}
+
+/* ==========================================
+   Buscador
+========================================== */
+
+.form-control,
+.form-select{
+
+    border-radius:12px;
+
+    min-height:46px;
+
+}
+
+.btn-primary{
+
+    border-radius:12px;
+
+}
+
+.btn-outline-primary{
+
+    border-radius:12px;
+
+}

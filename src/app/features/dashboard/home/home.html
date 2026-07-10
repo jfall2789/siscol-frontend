@@ -7,13 +7,13 @@
             Inicio
         </h2>
 
-        <p class="text-muted">
+        <p class="text-muted mb-0">
             Bienvenido nuevamente, Juan Francisco.
         </p>
 
     </div>
 
-    <!-- Tarjetas KPI -->
+    <!-- KPI -->
     <div class="row g-4">
 
         <!-- Usuarios -->
@@ -142,12 +142,13 @@
 
     </div>
 
-    <!-- Últimas incidencias -->
+    <!-- Segunda fila -->
     <div class="row mt-5">
 
-        <div class="col-12">
+        <!-- Últimas incidencias -->
+        <div class="col-lg-8">
 
-            <div class="card border-0 shadow-sm">
+            <div class="card border-0 shadow-sm h-100">
 
                 <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
 
@@ -173,93 +174,214 @@
 
                         <thead class="table-light">
 
-                            <tr>
+                        <tr>
 
-                                <th>Código</th>
+                            <th>Código</th>
 
-                                <th>Asunto</th>
+                            <th>Asunto</th>
 
-                                <th>Estado</th>
+                            <th>Estado</th>
 
-                                <th>Prioridad</th>
+                            <th>Prioridad</th>
 
-                                <th>Fecha</th>
+                            <th>Fecha</th>
 
-                            </tr>
+                        </tr>
 
                         </thead>
 
                         <tbody>
 
-                            <tr>
+                        <tr>
 
-                                <td><strong>INC-001</strong></td>
+                            <td><strong>INC-001</strong></td>
 
-                                <td>Falla de Internet - Aula 4</td>
+                            <td>Falla de Internet - Aula 4</td>
 
-                                <td>
-                                    <span class="badge bg-warning text-dark">
-                                        Pendiente
-                                    </span>
-                                </td>
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Pendiente
+                                </span>
+                            </td>
 
-                                <td>
-                                    <span class="badge bg-danger">
-                                        Alta
-                                    </span>
-                                </td>
+                            <td>
+                                <span class="badge bg-danger">
+                                    Alta
+                                </span>
+                            </td>
 
-                                <td>05/07/2026</td>
+                            <td>05/07/2026</td>
 
-                            </tr>
+                        </tr>
 
-                            <tr>
+                        <tr>
 
-                                <td><strong>INC-002</strong></td>
+                            <td><strong>INC-002</strong></td>
 
-                                <td>Proyector Laboratorio</td>
+                            <td>Proyector Laboratorio</td>
 
-                                <td>
-                                    <span class="badge bg-success">
-                                        Resuelto
-                                    </span>
-                                </td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Resuelto
+                                </span>
+                            </td>
 
-                                <td>
-                                    <span class="badge bg-secondary">
-                                        Baja
-                                    </span>
-                                </td>
+                            <td>
+                                <span class="badge bg-secondary">
+                                    Baja
+                                </span>
+                            </td>
 
-                                <td>04/07/2026</td>
+                            <td>04/07/2026</td>
 
-                            </tr>
+                        </tr>
 
-                            <tr>
+                        <tr>
 
-                                <td><strong>INC-003</strong></td>
+                            <td><strong>INC-003</strong></td>
 
-                                <td>PC Dirección</td>
+                            <td>PC Dirección</td>
 
-                                <td>
-                                    <span class="badge bg-primary">
-                                        En proceso
-                                    </span>
-                                </td>
+                            <td>
+                                <span class="badge bg-primary">
+                                    En proceso
+                                </span>
+                            </td>
 
-                                <td>
-                                    <span class="badge bg-warning text-dark">
-                                        Media
-                                    </span>
-                                </td>
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Media
+                                </span>
+                            </td>
 
-                                <td>04/07/2026</td>
+                            <td>04/07/2026</td>
 
-                            </tr>
+                        </tr>
 
                         </tbody>
 
                     </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Actividad reciente -->
+        <div class="col-lg-4">
+
+            <div class="card border-0 shadow-sm h-100">
+
+                <div class="card-header bg-white border-0 py-3">
+
+                    <h5 class="fw-bold mb-0">
+
+                        <i class="bi bi-clock-history text-primary me-2"></i>
+
+                        Actividad reciente
+
+                    </h5>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-person-check-fill text-success fs-4 me-3"></i>
+
+                        <div>
+
+                            <strong>Juan Pérez</strong>
+
+                            <div class="text-muted small">
+
+                                Registró una incidencia.
+
+                            </div>
+
+                            <small class="text-secondary">
+
+                                Hace 5 minutos
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-check-circle-fill text-primary fs-4 me-3"></i>
+
+                        <div>
+
+                            <strong>María Torres</strong>
+
+                            <div class="text-muted small">
+
+                                Cerró una incidencia.
+
+                            </div>
+
+                            <small class="text-secondary">
+
+                                Hace 20 minutos
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex mb-4">
+
+                        <i class="bi bi-clipboard-plus-fill text-warning fs-4 me-3"></i>
+
+                        <div>
+
+                            <strong>Carlos Díaz</strong>
+
+                            <div class="text-muted small">
+
+                                Registró un requerimiento.
+
+                            </div>
+
+                            <small class="text-secondary">
+
+                                Hace 1 hora
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex">
+
+                        <i class="bi bi-person-fill-gear text-info fs-4 me-3"></i>
+
+                        <div>
+
+                            <strong>Ana López</strong>
+
+                            <div class="text-muted small">
+
+                                Actualizó un usuario.
+
+                            </div>
+
+                            <small class="text-secondary">
+
+                                Hace 2 horas
+
+                            </small>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
