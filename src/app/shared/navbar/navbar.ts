@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
+
+import { MatIconModule } from '@angular/material/icon';
+
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatIconModule
+  ],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
+  styleUrl: './navbar.scss'
 })
-export class Navbar {}
+export class Navbar {
+
+  currentUser = 'Juan Amézquita';
+
+}

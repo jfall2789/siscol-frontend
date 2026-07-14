@@ -1,0 +1,202 @@
+<div class="container-fluid">
+
+    <!-- Encabezado -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+
+            <h2 class="fw-bold mb-1">
+
+                Nueva Incidencia
+
+            </h2>
+
+            <p class="text-muted mb-0">
+
+                Registre una nueva incidencia dentro del sistema.
+
+            </p>
+
+        </div>
+
+        <a
+            routerLink="/dashboard/incidents"
+            class="btn btn-outline-secondary">
+
+            <i class="bi bi-arrow-left me-2"></i>
+
+            Volver
+
+        </a>
+
+    </div>
+
+    <form
+        [formGroup]="incidentForm"
+        (ngSubmit)="save()">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body">
+
+                <div class="row g-4">
+
+                    <!-- Código -->
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+
+                            Código
+
+                        </label>
+
+                        <input
+                            class="form-control"
+                            value="Generado automáticamente"
+                            readonly>
+
+                    </div>
+
+                    <!-- Tipo -->
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+
+                            Tipo <span class="text-danger">*</span>
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            formControlName="type">
+
+                            <option value="">Seleccione...</option>
+
+                            <option value="HARDWARE">Hardware</option>
+
+                            <option value="SOFTWARE">Software</option>
+
+                            <option value="NETWORK">Red</option>
+
+                            <option value="OTHER">Otro</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Urgencia -->
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+
+                            Urgencia <span class="text-danger">*</span>
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            formControlName="urgency">
+
+                            <option value="">Seleccione...</option>
+
+                            <option value="LOW">Baja</option>
+
+                            <option value="MEDIUM">Media</option>
+
+                            <option value="HIGH">Alta</option>
+
+                            <option value="CRITICAL">Crítica</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Título -->
+
+                    <div class="col-12">
+
+                        <label class="form-label">
+
+                            Título <span class="text-danger">*</span>
+
+                        </label>
+
+                        <input
+                            class="form-control"
+                            formControlName="title"
+                            placeholder="Ingrese el título de la incidencia">
+
+                    </div>
+
+                    <!-- Ubicación -->
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+
+                            Ubicación <span class="text-danger">*</span>
+
+                        </label>
+
+                        <input
+                            class="form-control"
+                            formControlName="location"
+                            placeholder="Ej. Aula 203">
+
+                    </div>
+
+                    <!-- Descripción -->
+
+                    <div class="col-12">
+
+                        <label class="form-label">
+
+                            Descripción <span class="text-danger">*</span>
+
+                        </label>
+
+                        <textarea
+                            rows="6"
+                            class="form-control"
+                            formControlName="description"
+                            placeholder="Describa detalladamente la incidencia">
+
+                        </textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-footer bg-white d-flex justify-content-end gap-2">
+
+                <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    (click)="cancel()">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    <i class="bi bi-check-circle me-2"></i>
+
+                    Guardar Incidencia
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

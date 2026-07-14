@@ -1,112 +1,84 @@
-/* ==========================================
-   Encabezado
-========================================== */
+.container-fluid {
 
-h2{
-
-    color:#1f2937;
-
-    font-weight:700;
+    padding: 2rem;
 
 }
 
-/* ==========================================
-   Cards
-========================================== */
+.card {
 
-.card{
-
-    border-radius:16px;
-
-    transition:.25s ease;
+    border-radius: 18px;
 
 }
 
-.card:hover{
+.table {
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-}
-
-/* ==========================================
-   Tabla
-========================================== */
-
-.table thead th{
-
-    font-weight:600;
-
-    color:#6b7280;
-
-    border-bottom:2px solid #e5e7eb;
-
-    white-space:nowrap;
+    margin-bottom: 0;
 
 }
 
-.table tbody tr{
+.table thead th {
 
-    transition:.20s;
+    font-weight: 600;
 
-}
+    color: #5b6574;
 
-.table tbody tr:hover{
+    border-bottom: 2px solid #eef1f5;
 
-    background:#f8fbff;
-
-}
-
-/* ==========================================
-   Badges
-========================================== */
-
-.badge{
-
-    font-size:.80rem;
-
-    padding:.45rem .75rem;
-
-    border-radius:20px;
+    white-space: nowrap;
 
 }
 
-/* ==========================================
-   Botones de acciones
-========================================== */
+.table tbody td {
 
-.btn-sm{
-
-    width:36px;
-
-    height:36px;
-
-    padding:0;
-
-    border-radius:10px;
+    vertical-align: middle;
 
 }
 
-/* ==========================================
-   Buscador
-========================================== */
+.badge {
+
+    font-size: .80rem;
+
+    padding: .55rem .90rem;
+
+    font-weight: 600;
+
+}
+
+.btn-sm {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
 
 .form-control,
-.form-select{
+.form-select {
 
-    border-radius:12px;
+    height: 48px;
 
-    min-height:46px;
-
-}
-
-.btn-primary{
-
-    border-radius:12px;
+    border-radius: 12px;
 
 }
 
-.btn-outline-primary{
+.btn-primary {
 
-    border-radius:12px;
+    border-radius: 12px;
+
+    padding: .65rem 1.4rem;
+
+}
+
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-danger {
+
+    border-radius: 10px;
 
 }

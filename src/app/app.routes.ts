@@ -10,6 +10,8 @@ import { Home } from './features/dashboard/home/home';
 
 import { IncidentList } from './features/incident/incident-list/incident-list';
 
+import { IncidentForm } from './features/incident/incident-form/incident-form';
+
 export const routes: Routes = [
 
   {
@@ -20,23 +22,28 @@ export const routes: Routes = [
   {
     path: 'dashboard',
 
-    canActivate: [authGuard],
+    // canActivate: [authGuard],
 
     component: DashboardLayout,
 
-    children: [
+    children:[
 
-      {
-        path: '',
-        component: Home
-      },
+   {
+      path:'',
+      component:Home
+   },
 
-      {
-        path: 'incidents',
-        component: IncidentList
-      }
+   {
+      path:'incidents',
+      component:IncidentList
+   },
 
-    ]
+   {
+      path:'incidents/new',
+      component:IncidentForm
+   }
+
+]
 
   },
 

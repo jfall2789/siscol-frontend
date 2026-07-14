@@ -1,22 +1,18 @@
-.sidebar {
+.sidebar{
 
-    width: 260px;
+    width:260px;
 
-    min-height: calc(100vh - 56px);
+    height:calc(100vh - 72px);
 
-    background: #ffffff;
+    background:#FFFFFF;
 
-    border-right: 1px solid #e5e7eb;
+    border-right:1px solid #E5E7EB;
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
 }
-
-/* ===========================
-   BRANDING
-=========================== */
 
 .sidebar-brand{
 
@@ -26,49 +22,49 @@
 
     align-items:center;
 
-    padding:18px 20px;
+    height:120px;
 
-    border-bottom:1px solid #eef2f7;
+    border-bottom:1px solid #EEF2F7;
 
-    margin-bottom:12px;
-
-    min-height:120px;
+    margin-bottom:20px;
 
 }
 
 .sidebar-logo{
 
-    width:190px;
-    max-width:100%;
-    height:auto;
+    width:180px;
+
+    transition:.30s;
 
 }
 
-/* ===========================
-   MENÚ
-=========================== */
+.sidebar-logo:hover{
+
+    transform:scale(1.03);
+
+}
 
 .menu-section{
 
-    margin-bottom:18px;
+    padding:0 18px;
 
-    padding:0 20px;
+    margin-bottom:22px;
 
 }
 
-.menu-section span{
+.menu-section>span{
 
     display:block;
 
-    font-size:12px;
+    margin-bottom:12px;
+
+    font-size:11px;
 
     font-weight:700;
 
-    color:#9ca3af;
+    color:#94A3B8;
 
     letter-spacing:1px;
-
-    margin-bottom:12px;
 
 }
 
@@ -78,23 +74,21 @@
 
     align-items:center;
 
-    gap:12px;
+    gap:14px;
 
-    padding:10px 15px;
+    height:48px;
 
-    margin-bottom:8px;
+    padding:0 15px;
 
-    border-radius:10px;
+    border-radius:12px;
+
+    color:#475569;
 
     text-decoration:none;
 
-    color:#495057;
-
     font-weight:500;
 
-    transition:all .25s ease;
-
-    cursor:pointer;
+    transition:.25s;
 
 }
 
@@ -102,22 +96,48 @@
 
     font-size:18px;
 
+    width:22px;
+
+    text-align:center;
+
 }
 
 .menu-item:hover{
 
-    background:#eef4ff;
+    background:#EFF6FF;
 
-    color:#0d6efd;
+    color:#2563EB;
+
+    transform:translateX(4px);
 
 }
 
 .menu-item.active{
 
-    background:#0d6efd;
+    background:#2563EB;
 
-    color:#ffffff;
+    color:#FFF;
 
-    box-shadow:0 8px 18px rgba(13,110,253,.18);
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+
+}
+
+.system-section{
+
+    margin-top:auto;
+
+}
+
+.sidebar-footer{
+
+    padding:18px;
+
+    text-align:center;
+
+    border-top:1px solid #EEF2F7;
+
+    color:#94A3B8;
+
+    font-size:12px;
 
 }

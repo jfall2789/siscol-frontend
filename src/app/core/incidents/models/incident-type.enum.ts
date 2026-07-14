@@ -1,0 +1,13 @@
+export enum IncidentType {
+
+  HARDWARE = 'HARDWARE',
+
+  SOFTWARE = 'SOFTWARE',
+
+  NETWORK = 'NETWORK',
+
+  INFRASTRUCTURE = 'INFRASTRUCTURE',
+
+  OTHER = 'OTHER'
+
+}
