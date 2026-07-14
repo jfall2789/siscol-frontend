@@ -2,7 +2,10 @@
 
   <div class="row h-100 m-0">
 
-    <!-- Lado izquierdo -->
+    <!-- ===========================
+         PANEL IZQUIERDO
+    ============================ -->
+
     <div class="col-lg-7 d-none d-lg-flex login-left">
 
       <div class="login-brand">
@@ -23,18 +26,27 @@
         <div class="brand-features">
 
           <div class="feature-item">
+
             <i class="bi bi-check-circle-fill me-2"></i>
+
             Gestión de usuarios
+
           </div>
 
           <div class="feature-item">
+
             <i class="bi bi-check-circle-fill me-2"></i>
+
             Gestión de incidencias
+
           </div>
 
           <div class="feature-item">
+
             <i class="bi bi-check-circle-fill me-2"></i>
+
             Gestión de requerimientos
+
           </div>
 
         </div>
@@ -43,7 +55,10 @@
 
     </div>
 
-    <!-- Lado derecho -->
+    <!-- ===========================
+         PANEL DERECHO
+    ============================ -->
+
     <div class="col-lg-5 d-flex justify-content-center align-items-center">
 
       <div class="login-card">
@@ -60,85 +75,215 @@
         <div class="text-center mb-3">
 
           <div class="school-name">
+
             Institución Educativa
+
           </div>
 
           <div class="school-title">
+
             Diego Thomson
+
           </div>
 
           <div class="school-code">
+
             Código Modular 40222
+
           </div>
 
         </div>
 
         <hr>
 
-        <div class="text-center mb-3">
+        <div class="text-center mb-4">
 
           <h2>
+
             Bienvenido
+
           </h2>
 
           <p class="login-subtitle">
+
             Ingrese sus credenciales institucionales
+
           </p>
 
         </div>
 
-        <form>
+        <!-- ===========================
+             FORMULARIO
+        ============================ -->
+
+        <form
+          [formGroup]="loginForm"
+          (ngSubmit)="login()"
+          novalidate>
+
+          <!-- ===========================
+               EMAIL
+          ============================ -->
 
           <div class="mb-3">
 
             <label class="form-label">
+
               Correo institucional
+
             </label>
 
             <input
               type="email"
               class="form-control"
-              placeholder="nombre.apellido@siscol.edu.pe">
+              formControlName="email"
+              autocomplete="username"
+              placeholder="nombre.apellido@siscol.edu.pe"
+              [class.is-valid]="email.valid && email.touched"
+              [class.is-invalid]="email.invalid && (email.touched || email.dirty)">
+
+            @if(email.invalid && (email.touched || email.dirty)){
+
+            <div class="invalid-feedback d-block">
+
+              @if(email.errors?.['required']){
+
+              Debe ingresar el correo institucional.
+
+              }
+
+              @if(email.errors?.['email']){
+
+              El correo electrónico no tiene un formato válido.
+
+              }
+
+            </div>
+
+            }
 
           </div>
+
+          <!-- ===========================
+               PASSWORD
+          ============================ -->
 
           <div class="mb-3">
 
             <label class="form-label">
+
               Contraseña
-            </label>
-
-            <input
-              type="password"
-              class="form-control"
-              placeholder="********">
-
-          </div>
-
-          <div class="form-check mb-4">
-
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="remember">
-
-            <label
-              class="form-check-label"
-              for="remember">
-
-              Recordarme
 
             </label>
 
+            <div class="position-relative">
+
+              <input
+                [type]="hidePassword ? 'password' : 'text'"
+                class="form-control pe-5"
+                formControlName="password"
+                autocomplete="current-password"
+                placeholder="********"
+                [class.is-valid]="password.valid && password.touched"
+                [class.is-invalid]="password.invalid && (password.touched || password.dirty)">
+
+              <button
+                type="button"
+                class="password-toggle"
+                (click)="hidePassword = !hidePassword">
+
+                <i
+                  class="bi"
+                  [class.bi-eye]="hidePassword"
+                  [class.bi-eye-slash]="!hidePassword">
+
+                </i>
+
+              </button>
+
+            </div>
+
+            @if(password.invalid && (password.touched || password.dirty)){
+
+            <div class="invalid-feedback d-block">
+
+              @if(password.errors?.['required']){
+
+              Debe ingresar la contraseña.
+
+              }
+
+              @if(password.errors?.['minlength']){
+
+              La contraseña debe tener al menos 4 caracteres.
+
+              }
+
+            </div>
+
+            }
+
           </div>
+
+          <!-- ===========================
+               OPCIONES
+          ============================ -->
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div class="form-check">
+
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="remember">
+
+              <label
+                class="form-check-label"
+                for="remember">
+
+                Recordarme
+
+              </label>
+
+            </div>
+
+            <a
+              href="#"
+              class="forgot-password">
+
+              ¿Olvidó su contraseña?
+
+            </a>
+
+          </div>
+
+          <!-- ===========================
+               BOTÓN LOGIN
+          ============================ -->
 
           <button
             type="submit"
-            class="btn btn-primary w-100">
+            class="btn btn-primary w-100"
+            [disabled]="loading || loginForm.invalid">
 
-            <i class="bi bi-box-arrow-in-right me-2"></i>
+            @if(!loading){
 
-            Iniciar sesión
+            <span>
+
+              <i class="bi bi-box-arrow-in-right me-2"></i>
+
+              Iniciar sesión
+
+            </span>
+
+            }
+
+            @if(loading){
+
+            <mat-spinner diameter="22"></mat-spinner>
+
+            }
 
           </button>
 
@@ -148,7 +293,7 @@
 
         <p class="footer-login text-center mb-0">
 
-          © 2026 SisCol · Maestría en TI · UNSA
+          © 2026 SISCOL · Maestría TIC · UNSA
 
         </p>
 
